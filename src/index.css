@@ -1,0 +1,69 @@
+/* reset.css */
+
+/* Убираем отступы, поля и границы для всех элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем дефолтные стили для HTML5-элементов */
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figure,
+figcaption,
+hgroup,
+menu,
+details,
+summary {
+  display: block;
+}
+
+/* Убираем лишние стили у списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Сбрасываем оформление ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем дефолтное оформление у таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Сбрасываем стили для форм */
+
+
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+/* Убираем дефолтные отступы у изображений */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Добавляем базовый стиль для body */
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+}

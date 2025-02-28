@@ -1,0 +1,45 @@
+.formWrapper{
+    display:flex;
+    gap: 14px; ;
+    flex-direction: column;
+    padding: 15px 5px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.fieldWrapper 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formField
+{
+    padding: 5px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid black;
+
+}
+.subBTN
+{
+    border: 2px solid black; 
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+}
+.subBTN:hover,
+.subBTN:active,
+.subBTN.focus
+{
+    background-color: lightgray;
+}
+.error
+{
+    color: red;
+    margin-top: 5px;
+}

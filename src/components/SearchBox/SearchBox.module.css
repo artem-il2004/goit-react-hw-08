@@ -1,0 +1,12 @@
+.wrapper 
+{
+    margin-top: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.inputField
+{
+    border:1px solid black;
+}
