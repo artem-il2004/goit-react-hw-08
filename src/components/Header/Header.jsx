@@ -14,7 +14,7 @@ function Header() {
       </nav>
       <div>
         <a href="https://github.com/artem-il2004" target="_blank">внизу лого
-          <img src="https://i.pinimg.com/736x/2f/90/c1/2f90c1e9fc45169c0f2cc0dfe88e73a5.jpg" alt="котик мем" className={c.img} />
+          <img src="https://media1.tenor.com/m/YJz--uyNch8AAAAd/%D0%BA%D0%BE%D1%82-%D0%B5%D1%81%D1%82.gif" alt="котик мем" className={c.img} />
           </a>
     </div>
       </div>
