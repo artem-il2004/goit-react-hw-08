@@ -42,3 +42,12 @@
 {
     background-color: darkslategrey;
 }
+
+.login {
+    margin-left: 3px;
+    color: red;
+}
+
+.login:hover {
+    color: rgb(153, 6, 6);
+}

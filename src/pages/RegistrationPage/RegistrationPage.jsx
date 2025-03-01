@@ -1,7 +1,13 @@
 import { Field, Form, Formik } from "formik"
 import c from './RegistrationPage.module.css'
+import { useDispatch } from "react-redux"
+import { registerThunk } from "../../redux/auth/operations";
+import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toast";
 
 const RegistrationPage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const initialValues = {
     email: '',
     name: '',
@@ -9,9 +15,18 @@ const RegistrationPage = () => {
   }
   const handleSub = (values, options) => { 
     console.log(values);
+    dispatch(registerThunk(values))
+      .unwrap()
+      .then(() => {
+        toast.success('Registration successful');
+        navigate('/contacts', {replace : true});
+      })
+      .catch(() => toast.error('invalid data'));
     options.resetForm()
-    
   }
+
+  
+
   return (
     <div>
       <Formik initialValues={initialValues}
@@ -20,7 +35,7 @@ const RegistrationPage = () => {
         <Form className={ c.allForm}>
           <label className={c.label}>
             <span>Name:</span>
-            <Field name='Name' className={c.field} />
+            <Field name='name' className={c.field} />
           </label>
           <label className={c.label}>
             <span>Email:</span>
@@ -33,6 +48,7 @@ const RegistrationPage = () => {
           <button type="submit" className={c.subButton}>Register</button>
         </Form>
       </Formik>
+      <NavLink to="/login" className={c.login}>Maybe you have account?   {">"}{">"}Click{"<"}{"<"}  </NavLink>
     </div>
   )
 }

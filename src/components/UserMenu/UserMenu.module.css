@@ -1,0 +1,25 @@
+.active {
+    color: red;
+    text-decoration: underline;
+}
+.logOutBtn {
+    border: none;
+    display: flex;
+    padding: 5px 10px 5px 2px;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 26px;
+    transition: background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: border-radius 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: padding-left 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.logOutBtn:hover,
+.logOutBtn:focus,
+.logOutBtn:active {
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    padding-left: 20px;
+}

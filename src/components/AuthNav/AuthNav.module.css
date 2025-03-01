@@ -1,0 +1,10 @@
+.active {
+    color: red;
+    text-decoration: underline;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
