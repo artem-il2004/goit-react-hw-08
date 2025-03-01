@@ -23,3 +23,16 @@
     color: white;
     padding-left: 20px;
 }
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+.username
+{
+    background-color: aliceblue;
+    color: black;
+}

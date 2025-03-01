@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
@@ -22,27 +22,15 @@ function App() {
 
     return isRefreshing ? null : (
         <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<HomePage />} />
-                <Route
-                    path="/contacts"
-                    element={
-                        <PrivateRoute>
-                            <ContactsPage />
-                        </PrivateRoute>
-                    }
-                />
-            </Route>
-            <Route
-                path="/login"
-                element={<RestrictedRoute component={LoginPage} />}
-            />
-            <Route
-                path="/register"
-                element={<RestrictedRoute component={RegistrationPage} />}
-            />
-            <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+  <Route path="/" element={<Layout><Outlet /></Layout>}>
+    <Route index element={<HomePage />} />
+    <Route path="/contacts" element={<PrivateRoute component={ContactsPage} />} />
+    <Route path="/login" element={<RestrictedRoute component={LoginPage} />} />
+    <Route path="/register" element={<RestrictedRoute component={RegistrationPage} />} />
+    <Route path="*" element={<NotFoundPage />} />
+  </Route>
+</Routes>
+
     );
 }
 

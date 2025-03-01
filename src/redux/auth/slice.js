@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { loginThunk, logOutThunk, refreshUser, registerThunk } from "./operations";
+import { loginThunk, logOut,  refreshUser, registerThunk } from "./operations";
 
 const initialState = {
 user: {
@@ -32,15 +32,15 @@ const slice = createSlice({
                 state.token = action.payload.token
                 state.isLoggedIn = true
             })
-            .addCase(logOutThunk.fulfilled, () => initialState)
+            .addCase(logOut.fulfilled, () => initialState) //logOut fulfielled 
             .addCase(refreshUser.pending, (state) => {
                 state.isRefreshing = true
             })
-            .addCase(refreshUser.fulfilled, (state, action) => { 
-                state.user = action.payload.user;
-                state.isLoggedIn = true;
-                state.isRefreshing = false
-            })
+            .addCase(refreshUser.fulfilled, (state, action) => {
+    state.user = action.payload; 
+    state.isLoggedIn = true;
+    state.isRefreshing = false;
+})
             .addCase(refreshUser.rejected, (state) => {
                 state.isLoggedIn = false;
                 state.isRefreshing = false
