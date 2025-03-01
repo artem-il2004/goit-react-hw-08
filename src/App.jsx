@@ -8,7 +8,6 @@ import { selectIsRefresh } from "./redux/auth/selectors";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import RestrictedRoute from "./components/RestrictedRoute/RestrictedRoute";
 
-// Ленивая загрузка компонентов
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const ContactsPage = lazy(() => import("./pages/ContactsPage/ContactsPage"));
 const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage"));
